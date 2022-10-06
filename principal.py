@@ -8,5 +8,6 @@ if st.button("Inserir"):
     #novoReg = pd.DataFrame(data=[nome,email],columns=dados.columns)
     #novo = pd.concat([dados,novoReg])
     #novo.to_csv("dados.csv",index=False)
+    dados.insert('nome':nome,'email':email)
     st.table(dados)
     st.write("Ola ",nome," seu email eh:",email)
