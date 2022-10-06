@@ -6,7 +6,7 @@ nome = st.text_input("Digite o seu nome:")
 email = st.text_input("Digite o seu email:")
 if st.button("Inserir"):
     novoReg = pd.DataFrame([nome,email],columns=dados.columns)
-    novo = pd.concat(dados,novoReg)
+    novo = pd.concat([dados,novoReg])
     novo.to_csv("dados.csv")
     st.table(novo)
     st.write("Ola ",nome," seu email eh:",email)
